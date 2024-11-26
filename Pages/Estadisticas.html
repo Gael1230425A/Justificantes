@@ -1,0 +1,51 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="stylesheet" href="/styles/styles.css">
+        <title>Mostrar Estadisticas de los Alumnos</title>
+    </head>
+    <body class="bg-amber-100">
+
+        <div class="container">
+            <header class="header">
+                <img class="header-logo" src="../images/CBTIS86logo.png" alt="Encabezado de la Página" />
+            </header>
+            <nav class="menu">
+                <ul class="menu-list">
+                  <li><a href="/Pages/PagPrincipal.html" class="menu-link">Documentación del Programa</a></li>
+                  <li><a href="/Pages/NuevoJustificante.html" class="menu-link">Nuevo Justificante</a></li>
+                  <li><a href="/Pages/Estadisticas.html" class="menu-link">Estadísticas</a></li>
+                  <li><a href="/Pages/MovAdministrativos.html" class="menu-link">Movimientos Administrativos</a></li>
+                  <li><a href="/Pages/ActDB.html" class="menu-link">Actualizar Bases de Datos</a></li>
+                </ul>
+            </nav>     
+            <!--Ejemplo de Estructura -->
+            <form action="">
+                <fieldset class="border  border-black p-5">
+                    <legend>
+                        Seleccionar Mes:
+                        <select name="" id="">
+                            <option value="">Enero</option>
+                        </select>
+                        <button class="border  border-black p-5">Mostrar</button>
+                    </legend>
+    
+                    <section class="border  border-black p-5">
+                        <fieldset class="border  border-black p-5">
+                            <legend>Estadisticas del Mes de Octubre (Turno Matutino)</legend>
+                            <canvas class="border  border-black "></canvas>
+                        </fieldset>
+
+                        <fieldset class="border  border-black p-5">
+                            <legend>Estadisticas del Mes de Octubre (Turno Vespertino)</legend>
+                            <canvas class="border  border-black "></canvas>
+                        </fieldset>
+                    </section>
+                </fieldset>
+            </form>
+        </div>
+
+    </body>
+</html>

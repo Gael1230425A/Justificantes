@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proceso de Solicitud de Justificante</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img class="header-logo" src="../images/CBTIS86logo.png" alt="Encabezado de la Página" />
+    </header>
+    <header>
+        <h1 class="welcome-text">
+          ¡Bienvenido al Proceso de Solicitud de Justificante del CBTIS 86!
+        </h1>
+    </header>
+
+    <form id="loginForm" onsubmit="return handleLogin(event)">
+        <fieldset class="login-form">
+            <legend class="form-title">Ingresa tu Nombre de Usuario y Contraseña</legend>
+            
+            <label class="form-label">
+                Nombre de Usuario:
+                <input type="text" id="username" />
+            </label>
+            
+            <label class="form-label">
+                Contraseña:
+                <input type="password" id="password" />
+            </label>
+            
+            <a href="/Pages/PagPrincipal.html" class="next-page-link">Siguiente Página</a>
+        </fieldset>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img class="header-logo" src="../images/CBTIS86logo.png" alt="Encabezado de la Página" />
+        </header>
+        <nav class="menu">
+            <ul class="menu-list">
+              <li><a href="/Pages/PagPrincipal.html" class="menu-link">Documentación del Programa</a></li>
+              <li><a href="/Pages/NuevoJustificante.html" class="menu-link">Nuevo Justificante</a></li>
+              <li><a href="/Pages/Estadisticas.html" class="menu-link">Estadísticas</a></li>
+              <li><a href="/Pages/MovAdministrativos.html" class="menu-link">Movimientos Administrativos</a></li>
+              <li><a href="/Pages/ActDB.html" class="menu-link">Actualizar Bases de Datos</a></li>
+            </ul>
+        </nav> 
+
+        <section>
+            <form action="" method="post">
+                <fieldset class="border  border-black p-5">
+                    <legend>Actualizar la Base de Datos</legend>
+                    <h4>Subir archivo Excel</h4>
+                    <input type="file" name="subirArc" id="subirArc" accept=".xls, .xlsx, .csv">
+                    <button class="border border-black p-2">Agregar grupo</button>
+                </fieldset>
+            </form>
+
+            <form action="">
+                <fieldset class="border border-black p-5">
+                    <legend>Grupos Ciclo Escolar 2024-2025</legend>
+                    <label>
+                        5°E 
+                        <button type="button" class="border border-black p-2">Eliminar</button>
+                        <button type="button" class="border border-black p-2">Editar</button>
+                    </label>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+
+</body>
+</html>

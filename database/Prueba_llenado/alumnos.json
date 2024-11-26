@@ -1,0 +1,16 @@
+[
+    {
+        "numero_control": 1,
+        "nombre": "Juan Pérez",
+        "semestre": 4,
+        "turno": "Matutino",
+        "numero_telefono_tutor": "1234567890"
+    },
+    {
+        "numero_control": 2,
+        "nombre": "Ana Gómez",
+        "semestre": 3,
+        "turno": "Vespertino",
+        "numero_telefono_tutor": "9876543210"
+    }
+]

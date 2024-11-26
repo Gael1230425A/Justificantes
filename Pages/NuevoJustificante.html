@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Nuevo Justificante</title>
+        <link rel="stylesheet" href="/styles/styles.css">
+    </head>
+    <body class="bg-amber-100">
+        <!--Contenedor Principal encargado del layout-->
+        <div class="container">
+            <header class="header">
+                <img class="header-logo" src="../images/CBTIS86logo.png" alt="Encabezado de la Página" />
+            </header>
+            <nav class="menu">
+                <ul class="menu-list">
+                  <li><a href="/Pages/PagPrincipal.html" class="menu-link">Documentación del Programa</a></li>
+                  <li><a href="/Pages/NuevoJustificante.html" class="menu-link">Nuevo Justificante</a></li>
+                  <li><a href="/Pages/Estadisticas.html" class="menu-link">Estadísticas</a></li>
+                  <li><a href="/Pages/MovAdministrativos.html" class="menu-link">Movimientos Administrativos</a></li>
+                  <li><a href="/Pages/ActDB.html" class="menu-link">Actualizar Bases de Datos</a></li>
+                </ul>
+            </nav> 
+           
+            <header class="border  border-black p-5">
+                <h2 class="text-5xl  text-green-800">Solicitud de Justificantes</h2>
+            </header>
+
+            <!--Buscador -->
+            <main>
+                <form action="">
+                    <fieldset class="login border  border-black p-10">
+                        <legend class="border  border-black p-5">
+                            <header>
+                                <h3><strong>Número de Control del alumno:</strong></h3>
+                            </header>
+                        </legend>
+                        
+                        <label class="border  border-black p-5">
+                            <input class=" border-black border" type="number">
+                            <button class="border  border-black p-3">Buscar Alumno</button>
+                        </label>    
+                       
+                    </fieldset>
+                </form>
+            </main>
+        </div>
+
+    </body>
+</html>

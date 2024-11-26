@@ -1,0 +1,129 @@
+/* Reset base styles (similar to Tailwind's reset) */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+  line-height: inherit;
+  background-color: white;
+  color: black;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Layout and styling */
+.container {
+  width: 100%;
+}
+
+.header {
+  background-color: #991b1b; /* bg-red-800 */
+  padding: 20px; /* p-5 */
+  width: 100%; /* w-screen */
+}
+
+.header-logo {
+  width: auto; /* w-auto */
+  height: 80px; /* h-20 */
+}
+
+.welcome-text {
+  font-size: 1.875rem; /* text-3xl */
+  color: #047857; /* text-green-700 */
+  font-weight: 700; /* font-bold */
+  text-align: center; /* text-center */
+  margin-top: 16px;
+}
+
+.login-form {
+  background-color: #94a3b8; /* bg-slate-400 */
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0px 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  border-radius: 10px; /* rounded-lg */
+  padding: 40px; /* p-10 */
+  display: grid; /* grid */
+  gap: 16px; /* gap-4 */
+  place-items: center; /* place-items-center */
+  height: 66.6667%; /* h-4/6 */
+  width: 25%; /* w-1/4 */
+  position: absolute; /* absolute */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-title {
+  font-size: 1.25rem; /* text-1xl */
+  text-align: center; /* text-center */
+  margin-bottom: 24px; /* mb-6 */
+}
+
+.form-label {
+  display: block;
+  padding: 10px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db; /* Default border color */
+  border-radius: 4px;
+}
+
+.next-page-link {
+  text-decoration: none;
+  color: #1d4ed8; /* Blue link color */
+}
+* Menu Styles */
+.menu {
+  width: 100%; /* w-screen */
+}
+
+.menu-list {
+  display: grid; /* grid */
+  grid-template-columns: repeat(5, 1fr); /* grid-cols-5 */
+  background-color: #2d3748; /* bg-gray-800 */
+  padding: 16px; /* p-4 */
+  list-style: none;
+  gap: 16px; /* gap-4 */
+  text-align: center; /* text-center */
+  font-weight: bold; /* font-bold */
+  color: white; /* text-white */
+}
+
+.menu-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.menu-link:hover {
+  color: #edf2f7; /* Lighter white on hover */
+  background-color: #4a5568; /* Slightly lighter gray on hover */
+}

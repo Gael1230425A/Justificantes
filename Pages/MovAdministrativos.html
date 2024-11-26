@@ -1,0 +1,35 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="stylesheet" href="/styles/styles.css">
+        <title>Movimientos Administrativos</title>
+    </head>
+    <body class="bg-amber-100">
+        <div class="container">
+            <header class="header">
+                <img class="header-logo" src="../images/CBTIS86logo.png" alt="Encabezado de la Página" />
+            </header>
+            <nav class="menu">
+                <ul class="menu-list">
+                  <li><a href="/Pages/PagPrincipal.html" class="menu-link">Documentación del Programa</a></li>
+                  <li><a href="/Pages/NuevoJustificante.html" class="menu-link">Nuevo Justificante</a></li>
+                  <li><a href="/Pages/Estadisticas.html" class="menu-link">Estadísticas</a></li>
+                  <li><a href="/Pages/MovAdministrativos.html" class="menu-link">Movimientos Administrativos</a></li>
+                  <li><a href="/Pages/ActDB.html" class="menu-link">Actualizar Bases de Datos</a></li>
+                </ul>
+            </nav>     
+            <!-- Esto solo es un ejemplo de como se deberia ver -->
+            <main>
+                <fieldset class="border  border-black p-5">
+                    <legend class="border  border-black p-5">Últimos Movimientos</legend>
+                    <label>Gael Apanco López 20/10/2024 <strong>Razón:</strong>Enfermedad</label>
+                    <button class="border  border-black p-2">Borrar</button>
+                    <button class="border  border-black p-2">Editar</button>
+                    <label for="">Cambio realizado por X persona</label>
+                </fieldset>
+            </main>
+        </div>
+    </body>
+</html>

@@ -3,21 +3,32 @@ $admin = $_POST["admin"];
 $password = $_POST["password"];
 session_start();
 
-$_SESSION['admin']= $admin;
+$_SESSION['admin'] = $admin;
 
-$cnx = mysqli_connect("localhost","root","","justificantes");
-$consulta = "SELECT*FROM orientador WHERE Nombre='$admin' and Contraseña= '$password'";
-$res = mysqli_query($cnx,$consulta);
-$filas = mysqli_num_rows($res);
+// Conectar a la base de datos
+$cnx = mysqli_connect("localhost", "root", "", "justificantes");
 
-if($filas) header("Location:PagPrincipal.php");
-else{
-    include("index.html");
-    ?>
-    <h1 class="bad">ERROR DE LA AUTENTICACION</h1>
-    <?php
+// Buscar el usuario por su nombre
+$consulta = "SELECT * FROM orientador WHERE Nombre='$admin'";
+$res = mysqli_query($cnx, $consulta);
+
+if ($res && mysqli_num_rows($res) > 0) {
+    $usuario = mysqli_fetch_assoc($res);
+    $password_hash = $usuario['Contraseña']; // Contraseña cifrada en la base de datos
     
+    // Verificar si la contraseña ingresada coincide con el hash
+    if (password_verify($password, $password_hash)) {
+        header("Location: PagPrincipal.php");
+        exit;
+    } else {
+        include("index.html");
+        echo '<h1 class="bad">ERROR: Contraseña incorrecta</h1>';
+    }
+} else {
+    include("index.html");
+    echo '<h1 class="bad">ERROR: Usuario no encontrado</h1>';
 }
+
 mysqli_free_result($res);
 mysqli_close($cnx);
 ?>

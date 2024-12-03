@@ -30,7 +30,8 @@ if($sesion == null || $sesion==""){
                 <li><a href="Estadisticas.php" class="menu-link">Estadísticas</a></li>
                 <li><a href="MovAdministrativos.php" class="menu-link">Movimientos Administrativos</a></li>
                 <li><a href="ActDB.php" class="menu-link">Actualizar Bases de Datos</a></li>
-                <li><a href="CerrarSesion.php">CERRAR SESION</a></li>
+        <li><a href="Cambio.php">USUARIO</a></li>
+        <li><a href="CerrarSesion.php">CERRAR SESION</a></li>
 
             </ul>
         </nav>

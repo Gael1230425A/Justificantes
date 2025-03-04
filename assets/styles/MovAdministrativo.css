@@ -1,0 +1,200 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5dc; /* Beige */
+    color: #006400; /* Verde */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 100%; /* Establece el ancho máximo al 100% */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+.header {
+    background-color: #800000; /* Vino */
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.header-logo {
+    max-width: 500px; /* Logo más pequeño */
+    margin: 10px auto;
+}
+
+/* Menú de navegación */
+.menu {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000; /* Negro */
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.menu-list li {
+    position: relative;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #ffffff; /* Blanco */
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-link:hover {
+    background-color: #800000; /* Vino */
+}
+
+/* Estilos para el submenú */
+.menu-list li ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000; /* Negro */
+    display: none; /* Oculto por defecto */
+}
+
+.menu-list li:hover ul {
+    display: block; /* Mostrar submenú al pasar el ratón */
+}
+
+.menu-list li ul li {
+    width: 100%;
+}
+
+.menu-list li ul li a {
+    padding: 10px 15px;
+    color: #ffffff; /* Blanco */
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.menu-list li ul li a:hover {
+    background-color: #800000; /* Vino */
+}
+
+
+/* Estilo del formulario de Movimientos */
+main {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 2px solid #800000; /* Vino */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #800000; /* Vino */
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Estilo de las etiquetas de los movimientos */
+label {
+    font-size: 1.1rem;
+    color: #006400; /* Verde */
+    margin-bottom: 10px;
+    padding: 30px 0;
+}
+
+strong {
+    font-weight: bold;
+    color: #800000; /* Vino */
+}
+
+/* Estilo de los botones (Borrar, Editar) */
+input[type="submit"] {
+    background-color: #800000; /* Vino */
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #006400; /* Verde */
+}
+
+button:active {
+    transform: scale(0.98); /* Efecto de "clic" */
+}
+
+/* Estilo para la información adicional sobre los cambios */
+.orientador {
+    font-size: 12px;
+    color: #333; /* Gris oscuro para el texto informativo */
+    margin-top: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+        padding: 15px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

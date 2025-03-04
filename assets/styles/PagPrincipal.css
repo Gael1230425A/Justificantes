@@ -1,0 +1,189 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5dc; /* Beige */
+    color: #006400; /* Verde */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 0;
+}
+
+/* Encabezado */
+.header {
+    background-color: #800000; /* Vino */
+    text-align: center;
+    padding: 30px 0; /* Ajuste de padding */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Asegura que el encabezado ocupe todo el ancho */
+}
+
+.header-logo {
+    max-width: 500px; /* Logo más grande */
+    margin-bottom: 10px;
+}
+
+.welcome-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #006400; /* Verde */
+    margin-top: 10px;
+}
+
+/* Menú de navegación */
+.menu {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000; /* Negro */
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.menu-list li {
+    position: relative;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #ffffff; /* Blanco */
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-link:hover {
+    background-color: #800000; /* Vino */
+}
+
+/* Estilos para el submenú */
+.menu-list li ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000; /* Negro */
+    display: none; /* Oculto por defecto */
+}
+
+.menu-list li:hover ul {
+    display: block; /* Mostrar submenú al pasar el ratón */
+}
+
+.menu-list li ul li {
+    width: 100%;
+}
+
+.menu-list li ul li a {
+    padding: 10px 15px;
+    color: #ffffff; /* Blanco */
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.menu-list li ul li a:hover {
+    background-color: #800000; /* Vino */
+}
+
+/* Sección de documentación */
+.nav-doc {
+    background-color: #fff5f5; /* Color suave para la navegación */
+    border: 1px solid #800000; /* Vino */
+    border-radius: 10px;
+}
+
+.nav-doc ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.nav-doc a {
+    text-decoration: none;
+    color: #800000; /* Vino */
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.nav-doc a:hover {
+    background-color: #800000; /* Vino */
+}
+
+/* Sección de contenido */
+section {
+    padding: 20px;
+    margin-top: 10px; /* Para que no quede debajo del menú */
+}
+
+/* Estilo para los artículos dentro de la documentación */
+article {
+    padding: 15px;
+    background-color: #f5f5dc; /* Beige */
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+article h2 {
+    font-size: 1.8rem;
+    color: #800000; /* Vino */
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo para los aside */
+aside h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #006400; /* Verde */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #800000; /* Vino */
+    padding-bottom: 5px;
+}
+
+/* Asegura que el layout esté bien distribuido */
+.container {
+    width: 100vw;
+    max-width: 100vw; /* Max width para no hacer todo demasiado grande en pantallas grandes */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: #800000;
+}

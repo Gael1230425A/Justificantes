@@ -1,0 +1,236 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5dc; /* Beige */
+    color: #006400; /* Verde */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 100%; /* Establece el ancho máximo al 100% */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+.header {
+    background-color: #800000; /* Vino */
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.header-logo {
+    max-width: 500px; /* Logo más pequeño */
+    margin: 10px auto;
+}
+
+/* Menú de navegación */
+.menu {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000; /* Negro */
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.menu-list li {
+    position: relative;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #ffffff; /* Blanco */
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-link:hover {
+    background-color: #800000; /* Vino */
+}
+
+/* Estilos para el submenú */
+.menu-list li ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000; /* Negro */
+    display: none; /* Oculto por defecto */
+}
+
+.menu-list li:hover ul {
+    display: block; /* Mostrar submenú al pasar el ratón */
+}
+
+.menu-list li ul li {
+    width: 100%;
+}
+
+.menu-list li ul li a {
+    padding: 10px 15px;
+    color: #ffffff; /* Blanco */
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.menu-list li ul li a:hover {
+    background-color: #800000; /* Vino */
+}
+
+
+/* Estilo del formulario de selección */
+form {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+fieldset {
+    border: 2px solid #800000; /* Vino */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+legend {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #800000; /* Vino */
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+select {
+    width: 48%;
+    padding: 10px;
+    margin: 10px 1%;
+
+    background-color: #f9f9f9;
+    font-size: 1rem;
+}
+
+select:focus {
+    border-color: #006400; /* Verde */
+    background-color: #fff;
+    outline: none;
+}
+
+input[type="submit"] {
+    padding: 12px;
+    border: none;
+    background-color: #800000; /* Vino */
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #006400; /* Verde */
+}
+
+input[type="submit"]:active {
+    transform: scale(0.98); /* Efecto de "clic" */
+}
+
+/* Estilo de la gráfica */
+#Grafica {
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Asegura que la gráfica se ajuste */
+    height: auto;
+}
+
+/* Leyenda de las estadísticas */
+#estadisticas-legend {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #006400; /* Verde */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Ajustes para un diseño más fluido */
+section {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+}
+
+/* Mejora en la disposición de los select */
+select {
+    display: inline-block;
+    width: auto;
+    margin-right: 15px;
+}
+
+/* Estilo adicional para la responsividad */
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    select {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+
+    #Grafica {
+        width: 100%;
+        height: auto;
+    }
+}

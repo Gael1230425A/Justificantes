@@ -1,0 +1,154 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general y tipografía */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Gris muy claro */
+    color: #333; /* Color oscuro para texto */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 100%; /* Establece el ancho máximo al 100% */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+.header {
+    background-color: #800000; /* Vino */
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.header-logo {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Tabla con un nuevo diseño */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Eliminar espacios entre celdas */
+    margin-bottom: 30px;
+}
+
+/* Estilos para las filas de la tabla */
+thead {
+    background-color: #800000; /* Vino */
+    color: #ffffff;
+}
+
+th {
+    padding: 12px;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase; /* Convertir a mayúsculas */
+    letter-spacing: 1px; /* Espaciado de letras */
+}
+
+/* Filas de datos */
+tbody tr {
+    background-color: #f9f9f9; /* Color de fondo de las filas */
+    border-bottom: 1px solid #ddd; /* Separación suave entre filas */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f1f1; /* Fondo alternado más oscuro para mejorar la legibilidad */
+}
+
+tbody td {
+    padding: 10px;
+    font-size: 1rem;
+    color: #555; /* Gris oscuro para el texto */
+    border-left: 1px solid #ddd; /* Añadir separación entre celdas */
+    border-right: 1px solid #ddd;
+}
+
+tbody td input,
+tbody td select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+
+tbody td input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Estilos de los botones */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #800000; /* Verde */
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    height: 40px;
+}
+a, a:link, a:visited, a:hover, a:active {
+    color: inherit; /* El color será el mismo que el de su contenedor */
+    text-decoration: none; /* Si también quieres quitar el subrayado */
+}
+
+button:hover {
+    background-color: #800000; /* Vino */
+}
+
+/* Estilo para el formulario */
+form {
+    width: 100%;
+    flex-direction: column;
+}
+
+/* Mensajes de error */
+#error {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: red;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Ajustes para los campos de entrada */
+input[type="submit"] {
+    background-color: #800000; /* Verde */
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #460202; /* Vino */
+}

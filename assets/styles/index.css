@@ -1,0 +1,139 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5dc; /* Beige */
+  color: #006400; /* Verde */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 50px; /* Añadido espacio superior para encabezado */
+}
+
+/* Contenedor principal */
+.container {
+  width: 100%;
+  max-width: 500px; /* Formulario más pequeño */
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+/* Encabezado */
+.header {
+  background-color: #800000; /* Vino */
+  text-align: center;
+  padding: 30px 0; /* Ajuste de padding */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-logo {
+  max-width: 500px; /* Logo más grande */
+  margin-bottom: 10px;
+}
+
+.welcome-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #006400; /* Verde */
+  margin-top: 10px;
+}
+
+/* Formulario de login */
+.login-form {
+  background-color: #fbe7e4; /* Beige claro */
+  border: 2px solid #800000; /* Vino */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-top: 80px; /* Espacio extra para que no se pegue al encabezado */
+}
+
+.form-title {
+  font-size: 1.4rem;
+  color: #800000; /* Vino */
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-label input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-label input:focus {
+  outline: none;
+  border-color: #006400; /* Verde */
+  box-shadow: 0 0 5px rgba(0, 100, 0, 0.3);
+}
+
+button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #800000; /* Vino */
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #4b0000; /* Vino más oscuro */
+  transform: translateY(-3px);
+}
+
+a{
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #800000; /* Vino */
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Mensajes de error */
+.error {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}

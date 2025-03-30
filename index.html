@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejecutar API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejecutar API</h1>
+        <button id="ejecutarApi">Ejecutar</button>
+        <div id="qrContainer" style="margin-top: 20px;"></div>
+    </div>
+    <picture></picture>
+
+    <script>
+    // Función para iniciar sesión en whatsapp
+    const iniciarSesion = async()=>{
+        const url = 'https://waspable1.p.rapidapi.com/sessions/init'
+        const options = {
+            method: 'POST',
+            headers: {
+                'x-rapidapi-key': '72bb3a9f45mshc0bcb46ee077d1fp1f97c8jsn57b09416950b',
+                'x-rapidapi-host': 'waspable1.p.rapidapi.com',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({name: 'otp'})
+        }
+
+        try {
+            const response = await fetch(url, options)
+            const result = await response.text()
+            console.log(result)
+        } catch (error) {
+            console.error(error)
+        }
+    }
+    
+    // Función para verificar si existe una sesión
+    const verificarSesion = async () => {
+        const url = 'https://waspable1.p.rapidapi.com/sessions/otp'
+        const options = {
+            method: 'GET',
+            headers: {
+                'x-rapidapi-key': '72bb3a9f45mshc0bcb46ee077d1fp1f97c8jsn57b09416950b',
+                'x-rapidapi-host': 'waspable1.p.rapidapi.com'
+            }
+        }
+
+        try {
+            const response = await fetch(url, options)
+            let result = await response.json()
+            if (result) {
+                // retornar la sesión iniciada
+                const sessionId = result.sessionId
+                return sessionId
+            }
+            else{
+                console.log('No hay sesión iniciada')
+                return null 
+            }
+        } catch (error) {
+            console.error(error)
+        }
+    }
+    
+    // Función para obtener el QR
+    const obtenerQR = async () => {
+        const url = 'https://waspable1.p.rapidapi.com/sessions/otp/show-qr'
+        const options = {
+            method: 'GET',
+            headers: {
+                'x-rapidapi-key': '72bb3a9f45mshc0bcb46ee077d1fp1f97c8jsn57b09416950b',
+                'x-rapidapi-host': 'waspable1.p.rapidapi.com',
+                'Accept': 'image/svg+xml' // Solicitar el QR como SVG
+            }
+        }
+
+        try {
+            const response = await fetch(url, options)
+            const qrSvg = await response.text() // Obtener el SVG como texto
+
+            // Mostrar el SVG en la página
+            const qrContainer = document.getElementById('qrContainer')
+            qrContainer.innerHTML = qrSvg // Insertar el SVG directamente en el contenedor
+        } catch (error) {
+            console.error('Error al obtener el QR:', error)
+        }
+    }
+
+    // Función para enviar mensajes
+    const mandarMensajes = async (number) => {
+        const url = 'https://waspable1.p.rapidapi.com/otp/messages'
+        const options = {
+            method: 'POST',
+            headers: {
+                'x-rapidapi-key': '72bb3a9f45mshc0bcb46ee077d1fp1f97c8jsn57b09416950b',
+                'x-rapidapi-host': 'waspable1.p.rapidapi.com',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                to: number,
+                content: {
+                    type: 'text',
+                    body: 'adiós popó',
+                    isPreviewUrl: false
+                }
+            })
+        }
+
+        try {
+            const response = await fetch(url, options)
+            const result = await response.text()
+            console.log(result)
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    // Manejar el evento del botón
+    const ejecutarApi = document.getElementById('ejecutarApi')
+    ejecutarApi.addEventListener('click', async () => {
+        const sessionId = await verificarSesion()
+        if (sessionId) {
+            console.log('Sesión ya iniciada:', sessionId)
+            const codigoQR = await obtenerQR()
+            console.log('Código QR:', codigoQR)
+            await mandarMensajes('527641324630') // Pasar el sessionId a la función
+        } else {
+            console.log('Iniciando sesión...')
+            await iniciarSesion()
+            console.log('Esperando QR...')
+            await obtenerQR()
+        }
+    })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</body>
+</html>
